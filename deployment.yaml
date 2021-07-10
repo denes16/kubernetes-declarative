@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fisrt-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fisrt-app
+  template:
+    metadata:
+      labels:
+        app: fisrt-app
+    spec:
+      containers:
+        - name: fisrt-app
+          image: denes16/kube-first-app
